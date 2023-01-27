@@ -1,9 +1,15 @@
 import React from 'react';
 
-export const Button = (props) => {
-	return (
-		<button className="button" onClick={props.onClick}>
-			{props.children}
-		</button>
-		)
+export class Button extends React.Component {
+	constructor(props) {
+		super(props)
+	}
+
+	render() {
+		return (
+			<button className="button" onClick={this.props.onClick}>
+				{this.props.children}
+			</button>
+			)
+	}
 }
